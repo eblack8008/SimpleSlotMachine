@@ -15,9 +15,10 @@ const deposit = () => {
         if (isNaN(numberDepositAmount) || numberDepositAmount <=0){
             console.log("Inavlid deposit amount, try again");
     } else {
-        return depositAmount;
+        return numberDepositAmount;
     }
     }
 };
 
-deposit();
+const depositAmount = deposit();
+
