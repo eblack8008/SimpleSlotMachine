@@ -6,8 +6,18 @@
 // 6. give the user their winnings
 // 7. Play again
 
-function deposit() {
+const prompt = require("prompt-sync")();
 
-}
+const deposit = () => {
+    while(true){
+        const depositAmount = prompt("enter a deposit amount: ");
+        const numberDepositAmount = parseFloat(depositAmount);
+        if (isNaN(numberDepositAmount) || numberDepositAmount <=0){
+            console.log("Inavlid deposit amount, try again");
+    } else {
+        return depositAmount;
+    }
+    }
+};
 
-deposit()
+deposit();
